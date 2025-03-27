@@ -706,7 +706,7 @@ section.footer a {
     .visual.cards img { animation-name:none; height:100% }
     .flex.process-text > div { width:auto; justify-content: flex-start; margin-top:16px; }
     .process-text .number { height:30px; width:30px; }
-    .process .video-container { width:100%; max-width:400px; }
+    .process .video-container { width:100%; max-width:400px; animation-name: none; }
     .testimonial-picture { margin-right:16px; width:64px }
     .table-container { margin-left:0; left:20px}
     .mail-card { left:60px }
