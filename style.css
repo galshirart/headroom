@@ -545,7 +545,7 @@ td:nth-child(5) { width:15% }
 .mail-card .highlight:nth-child(4) { animation-delay: 1.4s; }
 .mail-card .highlight:nth-child(5) { animation-delay: 1.6s; }
 .block.train {
-    height:512px;
+    height:460px;
     position: relative;
     align-items: center;
     overflow: hidden;
@@ -707,7 +707,7 @@ section.footer a {
     .visual.cards img { animation-name:none; height:100% }
     .flex.process-text > div { width:auto; justify-content: flex-start; margin-top:16px; }
     .process-text .number { height:30px; width:30px; }
-    /* .process .video-container { animation-name: none; border:0.5px solid #ffffff50; border-radius: 6px; margin:16px auto;} */
+    .process .video-container { animation-name: none; border:0.5px solid #ffffff50; border-radius: 6px; margin:16px auto;}
     .testimonial-picture { margin-right:16px; width:64px }
     .table-container { margin-left:0; left:20px}
     .mail-card { left:60px }
