@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hdrm-icon-person</title>
+    <g id="hdrm-icon-person" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.1">
+        <path d="M12,21 C16.418278,21 20,20.8210678 20,18.75 C20,16.6789322 16.418278,15 12,15 C7.581722,15 4,16.6789322 4,18.75 C4,20.8210678 7.581722,21 12,21 Z" id="Oval" stroke="#181818" fill="#181818"></path>
+        <circle id="Oval" stroke="#181818" fill="#181818" cx="12" cy="8" r="5"></circle>
+    </g>
+</svg>
