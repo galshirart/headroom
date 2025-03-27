@@ -540,8 +540,11 @@ td:nth-child(5) { width:15% }
 .mail-card .highlight:nth-child(3) { animation-delay: 1.2s; }
 .mail-card .highlight:nth-child(4) { animation-delay: 1.4s; }
 .mail-card .highlight:nth-child(5) { animation-delay: 1.6s; }
-.visual.train {
+.block.train {
     height:512px;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
 }
 .train-track {
     display: flex;
@@ -563,7 +566,7 @@ td:nth-child(5) { width:15% }
     height: 300px;
     flex-shrink: 0;
     border-radius: 6px;
-    margin: 4px;
+    margin: 32px;
     position: relative;
     background-size: cover;
     background-position: center;
