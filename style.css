@@ -137,6 +137,7 @@ label.fill {
     border-radius: 4px;
     background:rgba(0,0,0,0.1);
     position: relative;
+    white-space: nowrap;
 }
 .wrap {
     max-width:1500px;
