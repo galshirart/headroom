@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hdrm-icon-truck</title>
+    <g id="hdrm-icon-truck" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.1">
+        <path d="M4,5 L13,5 C14.1045695,5 15,5.8954305 15,7 L15,18 L15,18 L4,18 C2.8954305,18 2,17.1045695 2,16 L2,7 C2,5.8954305 2.8954305,5 4,5 Z" id="Rectangle" stroke="#181818" fill="#181818"></path>
+        <path d="M15,8 L17.9370143,8 C18.6016498,8 19.2228661,8.33017201 19.5947116,8.88105429 L21.6576973,11.9373294 C21.8807962,12.2678462 22,12.6575089 22,13.0562751 L22,16 C22,17.1045695 21.1045695,18 20,18 L15,18 L15,18 L15,8 Z" id="Rectangle" stroke="#181818" fill="#181818"></path>
+        <line x1="18" y1="12" x2="19" y2="12" id="Path-24" stroke="#181818" fill="#181818" stroke-linecap="round" stroke-linejoin="round"></line>
+        <path d="M5,18 C5,19.3807119 6.11928813,20.5 7.5,20.5 C8.88071187,20.5 10,19.3807119 10,18" id="Path" stroke="#181818" fill="#181818"></path>
+        <path d="M15,18 C15,19.3807119 16.1192881,20.5 17.5,20.5 C18.8807119,20.5 20,19.3807119 20,18" id="Path" stroke="#181818" fill="#181818"></path>
+    </g>
+</svg>

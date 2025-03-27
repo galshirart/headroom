@@ -145,7 +145,7 @@ label.fill {
 }
 .header {
     background:white;
-    padding:24px;
+    padding:16px;
     align-items: center;
     position: sticky;
     width:100%;
@@ -570,7 +570,6 @@ td:nth-child(5) { width:15% }
     position: relative;
     background-size: cover;
     background-position: center;
-    cursor: pointer;
 }
 .train-track .car p {
     position: absolute;
@@ -578,16 +577,11 @@ td:nth-child(5) { width:15% }
     font-weight: 500;
     width: 100%;
 }
-.train-track .car p:before {
-    content:" ";
-    display: inline-block;
-    width:24px;
-    height:24px;
+.train-track .car p img {
     position: relative;
     top:6px;
-    margin-right:2px;
+    margin-right:3px;
 }
-[icon="document"] p:before { background-image:url('assets/hdrm-icon-document.svg')}
 .stat {
     width:33.33%;
     padding:48px;

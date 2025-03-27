@@ -1,6 +1,6 @@
 <title>Headroom - Supercharge Your Work</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link href="style.css?12" rel="stylesheet">
+<link href="style.css?13" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/headroom-favicon.svg"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -174,15 +174,17 @@
     <div class="block flex train">
         <div class="train-track">
             <div class="car" style="background-image:url('assets/photo-bakery.png')" icon="document"><p>Manage orders for bakers</p></div>
-            <div class="car" style="background-image:url('assets/photo-marketeer.png')" icon="document"><p>Plan outreach for marketeers</p></div>
-            <div class="car" style="background-image:url('assets/photo-barber.png')" icon="document"><p>Track bookings for barbers</p></div>
-            <div class="car" style="background-image:url('assets/photo-carpenter.png')" icon="document"><p>Coordinate deliveries for carpenters</p></div>
-            <div class="car" style="background-image:url('assets/photo-interior-designer.png')" icon="document"><p>Manage projects for designers</p></div>
-            <div class="car" style="background-image:url('assets/photo-psychologist.png')" icon="document"><p>Manage patients for therapists</p></div>
-            <div class="car" style="background-image:url('assets/photo-creator.png')" icon="document"><p>Plan content for creators</p></div>
+            <div class="car" style="background-image:url('assets/photo-marketeer.png')" icon="graph"><p>Plan outreach for marketeers</p></div>
+            <div class="car" style="background-image:url('assets/photo-barber.png')" icon="calendar"><p>Track bookings for barbers</p></div>
+            <div class="car" style="background-image:url('assets/photo-carpenter.png')" icon="truck"><p>Coordinate deliveries for carpenters</p></div>
+            <div class="car" style="background-image:url('assets/photo-interior-designer.png')" icon="marker"><p>Manage projects for designers</p></div>
+            <div class="car" style="background-image:url('assets/photo-psychologist.png')" icon="person"><p>Manage patients for therapists</p></div>
+            <div class="car" style="background-image:url('assets/photo-creator.png')" icon="signed-document"><p>Plan content for creators</p></div>
         
             <script>
                 $('.train-track .car').each(function() {
+           
+                    $(this).find('p').prepend('<img src="assets/hdrm-icon-'+$(this).attr('icon')+'.svg" />')
                     $('.train-track').append($(this).clone())
                 })
             </script>
