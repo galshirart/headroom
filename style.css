@@ -374,7 +374,7 @@ section .right {
     width:100%;
     justify-content: space-around;
     z-index: 1;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: overlay;
 }
 .process .video-container {
     width:250px;
