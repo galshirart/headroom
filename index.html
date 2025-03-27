@@ -1,6 +1,6 @@
 <title>Headroom - Supercharge Your Work</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link href="style.css?13" rel="stylesheet">
+<link href="style.css?14" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/headroom-favicon.svg"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,9 +96,9 @@
     <div class="margin-big"></div>
 
     <div class="flex break process-text">
-        <div class="flex"><div class="number">1</div><p class="subtitle">Tell us about your business in a few words</p></div>
-        <div class="flex"><div class="number">2</div><p class="subtitle">Get work-ready apps based on your needs</p></div>
-        <div class="flex"><div class="number">3</div><p class="subtitle">Need a change? Simply describe the feature you need</p></div>
+        <div class="flex step"><div class="number">1</div><p class="subtitle">Tell us about your business in a few words</p></div>
+        <div class="flex step"><div class="number">2</div><p class="subtitle">Get work-ready apps based on your needs</p></div>
+        <div class="flex step"><div class="number">3</div><p class="subtitle">Need a change? Simply describe the feature you need</p></div>
     </div>
 
     <div class="margin-big"></div>
@@ -516,9 +516,7 @@ function placeRow(id) {
     .append('<td>'+inboxMails[id][3]+'</td>')
     .append('<td><label class="fill">'+inboxMails[id][4]+'</label></td>')
 
-
     $('.visual.inbox table tr.headers').after(newRow)
-
 
     mailIndex++;
 

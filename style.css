@@ -210,6 +210,7 @@ section .right {
     align-items: center;
     background-size:cover;
     min-height: 400px;
+    isolation: isolate;
 }
 .visual:after {
     position:absolute;
@@ -375,6 +376,9 @@ section .right {
     justify-content: space-around;
     z-index: 1;
     mix-blend-mode: hard-light;
+    -webkit-mix-blend-mode: hard-light;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 .process .video-container {
     width:250px;
@@ -579,7 +583,7 @@ td:nth-child(5) { width:15% }
 }
 .train-track .car p img {
     position: relative;
-    top:6px;
+    top:7px;
     margin-right:3px;
 }
 .stat {
@@ -703,7 +707,7 @@ section.footer a {
     .visual.cards img { animation-name:none; height:100% }
     .flex.process-text > div { width:auto; justify-content: flex-start; margin-top:16px; }
     .process-text .number { height:30px; width:30px; }
-    .process .video-container { animation-name: none; border:0.5px solid #ffffff50; border-radius: 6px; margin:16px auto;}
+    /* .process .video-container { animation-name: none; border:0.5px solid #ffffff50; border-radius: 6px; margin:16px auto;} */
     .testimonial-picture { margin-right:16px; width:64px }
     .table-container { margin-left:0; left:20px}
     .mail-card { left:60px }
