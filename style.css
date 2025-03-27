@@ -374,10 +374,11 @@ section .right {
     width:100%;
     justify-content: space-around;
     z-index: 1;
-    mix-blend-mode: overlay;
+    mix-blend-mode: hard-light;
 }
 .process .video-container {
     width:250px;
+    aspect-ratio: 1;
     overflow: hidden;
     text-align: center;
     margin:0 auto;
@@ -398,14 +399,14 @@ section .right {
     animation-delay: 2s;
 }
 .process .video-container video {
-    height:250px;
+    height:100%;
     transition: all 400ms;
 }
 .process .video-container:nth-child(2) video {
-    margin-left:-250px;
+    margin-left:-100%;
 }
 .process .video-container:nth-child(3) video {
-    margin-left:-500px;
+    margin-left:-200%;
 }
 .process video:hover {
     transform: translateY(-12px);
@@ -705,6 +706,7 @@ section.footer a {
     .visual.cards img { animation-name:none; height:100% }
     .flex.process-text > div { width:auto; justify-content: flex-start; margin-top:16px; }
     .process-text .number { height:30px; width:30px; }
+    .process .video-container { width:100%; max-width:400px; }
     .testimonial-picture { margin-right:16px; width:64px }
     .table-container { margin-left:0; left:20px}
     .mail-card { left:60px }
