@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'ABC Diatype Variable';
-    src: url("TWKLausanne-400.woff") format("truetype");
+    src: url("fonts/TWKLausanne-400.woff") format("truetype");
 }
 @font-face {
     font-family: 'ABC Diatype Mono Variable';
-    src: url("TWKLausanne-700.woff") format("truetype");
+    src: url("fonts/TWKLausanne-700.woff") format("truetype");
 }
 body {
     margin:0;
