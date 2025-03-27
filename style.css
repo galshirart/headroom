@@ -1,10 +1,6 @@
 @font-face {
-    font-family: 'ABC Diatype Variable';
-    src: url("fonts/TWKLausanne-400.woff") format("truetype");
-}
-@font-face {
-    font-family: 'ABC Diatype Mono Variable';
-    src: url("fonts/TWKLausanne-700.woff") format("truetype");
+    font-family: 'TWK Lausanne';
+    src: url("fonts/TWKLausanne-500.otf") format("truetype");
 }
 body {
     margin:0;
@@ -22,7 +18,7 @@ body {
     background: #123bff;
 }
 h1,h2,h3 {
-    font-weight:600;
+    font-weight:500;
     line-height:100%;
     letter-spacing: -2px;
     margin:0;
