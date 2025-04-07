@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hdrm-small-icon-clock</title>
+    <g id="hdrm-small-icon-clock" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <circle id="Oval" stroke="#181818" cx="8" cy="8" r="5.5"></circle>
+        <polyline id="Path-9" stroke="#181818" transform="translate(8, 7.5) rotate(45) translate(-8, -7.5)" points="5.64644661 6.14644661 8.35355339 8.85355339 10.3535534 6.85355339"></polyline>
+    </g>
+</svg>
