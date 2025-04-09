@@ -38,7 +38,7 @@ body {
 h1,h2,h3 {
     font-weight:700;
     line-height:100%;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     margin:0;
     font-family: 'TWK Lausanne';
     margin-bottom:32px;
@@ -166,7 +166,7 @@ label {
 label.fill {
     padding:3px 6px 2px;
     border-radius: 4px;
-    background:rgba(0,0,0,0.1);
+    background:rgba(0,0,0,0.06);
     position: relative;
     white-space: nowrap;
 }
@@ -178,6 +178,9 @@ label.grey {
 label.bold {
     font-weight:500;
     letter-spacing: 0.5px;
+}
+td label.badge {
+    font-size:12px;
 }
 .bullet {
     width:11px;
@@ -206,7 +209,7 @@ table {
     outline:0.5px solid #00000020;
     border-radius: 6px;
     border-collapse: collapse;
-    font-size:12px;
+    font-size:14px;
     width:100%;
     margin:8px 0;
 }
@@ -231,15 +234,16 @@ tr.headers label {
 }
 td {
     border-bottom:0.5px solid #00000020;
-    padding:4px 10px;
+    padding:6px 10px;
     position: relative;
+    width:17%;
 }
 td:first-of-type {
     width:20%;
     border-right:0.5px solid #00000020;
 }
 td:last-of-type {
-    width:14%;
+    width:12%;
     border-left:0.5px solid #00000020;
 }
 tr:last-of-type td {
@@ -320,13 +324,13 @@ td .small-icon {
 }
 .visual {
     width:100%;
-    border:0.5px solid #00000030;
+    border:0.5px solid #30111130;
     border-top: 0.5px solid #00000050;
     box-shadow: 0 0 32px #00000010;
     text-align: left;
     align-items: flex-start;
     position: relative;
-    pointer-events: none;
+    /* pointer-events: none; */
     transition: all 500ms cubic-bezier(0,0,0,1);
 }
 .visual:before {
@@ -430,7 +434,7 @@ td .small-icon {
     width:22%;
 }
 .side-bar .part {
-    padding:8px 16px;
+    padding:6px 12px;
 }
 .side-bar .tab {
     margin:8px;
@@ -554,10 +558,9 @@ td .small-icon {
     height:100%;
     display: flex;
     align-items: center;
-    color:#123bff;
     background:#EEF8FF;
     padding-left: 8px;
-    margin-left: -8px;
+    margin-left: -10px;
 }
 .thinking:after {
     content:"Thinking...";
@@ -570,9 +573,9 @@ td .small-icon {
     margin-left:4px
 }
 @keyframes thinking {
-    0% { color:#123bff50 }
-    50% { color:#123bff }
-    100% { color:#123bff50 }
+    0% { opacity:0.3 }
+    50% { opacity:0.6}
+    100% { opacity:0.3 }
 }
 td.revealed {
     animation-name:reveal;
@@ -584,7 +587,7 @@ td.revealed {
     100% { opacity:1; }
 }
 .scale {
-    width:24px;
+    width:18px;
     height:8px;
     border-radius: 3px;
     border:0.5px solid #181818;
@@ -598,9 +601,9 @@ td.revealed {
     position: absolute;
     z-index:1;
     content:" ";
-    width:7px;
+    width:5px;
     height:8px;
-    left:8px;
+    left:6px;
     border-left:0.5px solid #181818;
     border-right:0.5px solid #181818;
 }
@@ -611,16 +614,18 @@ td.revealed {
     position: absolute;
     display: block;
     height:100%;
-    opacity:0.4;
 }
 .scale[data-level='1']:after {
-    width:8px;
+    width:6px;
+    background:#ffe44b
 }
 .scale[data-level='2']:after {
-    width:16px;
+    width:12px;
+    background:#ffb443
 }
 .scale[data-level='3']:after {
-    width:24px;
+    width:18px;
+    background:#ff8453
 }
 .button.more {
     margin-left:4px;
@@ -920,7 +925,7 @@ tr.new {
 
     <div class="visual hero round flex enter-animation go-up" view="workspace">
         <div class="side-bar">
-            <div class="part flex left" style="height:61px">
+            <div class="part flex left" style="height:60px">
                 <span class="company-logo round" style="background-image:url('assets/company-logo-flexxi.png'); margin-right:6px;"></span>Flexxi Design<span class="small-icon" style="background:url('assets/hdrm-small-icon-chevron-down.svg'); position: relative; left:2px"></span>
             </div>
             <div class="line"></div>
@@ -993,10 +998,10 @@ tr.new {
                 </div>
                 <table class="enter-animation go-up">
                     <tr class="headers"><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-speech.svg')"></span>TITLE</td><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-person.svg')"></span>CLIENT</td><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-calendar.svg')"></span>DATE</td><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-lightning.svg')"></span>URGENCY<label class="fill">AI</label></td><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-select.svg')"></span>TYPE<label class="fill">AI</label></td><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-click.svg')"></span>ACTIONS</div></td></tr>
-                    <tr class="focus"><td>Event Video Needed</td><td><a class="link">Timberline</a></td><td>Today</td><td><span class="scale" data-level="3"></span> High<div class="thinking"><span class="loader"></span></div></td><td><label class="fill">Video</label><div class="thinking"><span class="loader"></span></div></td><td><div class="button small" onclick="visualNav('actions')">Assign</div><div class="button small more"><span>•••</span></div></td></tr>
-                    <tr><td>Website Redesign Proposal</td><td><a class="link">Acme Corp</a></td><td>Yesterday</td><td><span class="scale" data-level="2"></span> Medium<div class="thinking"><span class="loader"></span></div></td><td><label class="fill">Design</label><div class="thinking"><span class="loader"></span></div></td><td><div class="button small">Assign</div><div class="button small more"><span>•••</span></div></td></tr>
-                    <tr><td>Logo Revision</td><td><a class="link">BlueOcean</a></td><td>3 days ago</td><td><span class="scale" data-level="1"></span> Low<div class="thinking"><span class="loader"></span></div></td><td><label class="fill">Branding</label><div class="thinking"><span class="loader"></span></div></td><td><div class="button small">Assign</div><div class="button small more"><span>•••</span></div></td></tr>
-                    <tr><td>Social Media Assets</td><td><a class="link">GreenTech</a></td><td>4 days ago</td><td><span class="scale" data-level="2"></span> Medium<div class="thinking"><span class="loader"></span></div></td><td><label class="fill">Social</label><div class="thinking"><span class="loader"></span></div></td><td><div class="button small">Assign</div><div class="button small more"><span>•••</span></div></td></tr>
+                    <tr class="focus"><td>Event Video Needed</td><td><a class="link">Timberline</a></td><td>Today</td><td><span class="scale" data-level="3"></span> High<div class="thinking"><span class="loader"></span></div></td><td><label class="fill badge">Video</label><div class="thinking"><span class="loader"></span></div></td><td><div class="button small" onclick="visualNav('actions')">Assign</div><div class="button small more"><span>•••</span></div></td></tr>
+                    <tr><td>Website Redesign Proposal</td><td><a class="link">Acme Corp</a></td><td>Yesterday</td><td><span class="scale" data-level="2"></span> Medium<div class="thinking"><span class="loader"></span></div></td><td><label class="fill badge">Design</label><div class="thinking"><span class="loader"></span></div></td><td><div class="button small">Assign</div><div class="button small more"><span>•••</span></div></td></tr>
+                    <tr><td>Logo Revision</td><td><a class="link">BlueOcean</a></td><td>3 days ago</td><td><span class="scale" data-level="1"></span> Low<div class="thinking"><span class="loader"></span></div></td><td><label class="fill badge">Branding</label><div class="thinking"><span class="loader"></span></div></td><td><div class="button small">Assign</div><div class="button small more"><span>•••</span></div></td></tr>
+                    <tr><td>Social Media Assets</td><td><a class="link">GreenTech</a></td><td>4 days ago</td><td><span class="scale" data-level="2"></span> Medium<div class="thinking"><span class="loader"></span></div></td><td><label class="fill badge">Social</label><div class="thinking"><span class="loader"></span></div></td><td><div class="button small">Assign</div><div class="button small more"><span>•••</span></div></td></tr>
                 </table>
                 <div style="margin-top:24px"></div>
                 <div class="small"><span class="bullet fill-blue small"></span>3 In Progress</div>
@@ -1011,8 +1016,8 @@ tr.new {
                 <div class="small"><span class="bullet fill-green small"></span>2 Resolved</div>
                 <table class="enter-animation go-up" style="animation-delay: 800ms;">
                     <tr class="headers"><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-speech.svg')"></span>TITLE</td><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-person.svg')"></span>CLIENT</td><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-person.svg')"></span>ASIGNEE</td><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-clock.svg')"></span>RESOLUTION TIME</td><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-text.svg')"></span>NOTE</td><td><span class="small-icon" style="background:url('assets/hdrm-small-icon-click.svg')"></span>ACTIONS</td></tr>
-                    <tr><td>Website Redesign</td><td><a class="link">Acme Corp</a></td><td><span class="avatar" style="background-image:url('assets/avatar-3.png')"></span>Jeena Chen</td><td>1 day</td><td>Client approved final design</td><td><div class="button small">Re-open</div><div class="button small more"><span>•••</span></div></td></tr>
-                    <tr><td>Product Photos</td><td><a class="link">NorthStar</a></td><td><span class="avatar" style="background-image:url('assets/avatar-4.png')"></span>Ron Parker</td><td>14 days</td><td>Photos delivered and approved</td><td><div class="button small">Re-open</div><div class="button small more"><span>•••</span></div></td></tr>
+                    <tr><td>Website Redesign</td><td><a class="link">Acme Corp</a></td><td><span class="avatar" style="background-image:url('assets/avatar-3.png')"></span>Jeena Chen</td><td>1 day</td><td>Client approved fin...</td><td><div class="button small">Re-open</div><div class="button small more"><span>•••</span></div></td></tr>
+                    <tr><td>Product Photos</td><td><a class="link">NorthStar</a></td><td><span class="avatar" style="background-image:url('assets/avatar-4.png')"></span>Ron Parker</td><td>14 days</td><td>Photos delivered vi...</td><td><div class="button small">Re-open</div><div class="button small more"><span>•••</span></div></td></tr>
                 </table>
             </div>
         </div>
