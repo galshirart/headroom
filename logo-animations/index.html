@@ -43,6 +43,9 @@ body {
     letter-spacing: 0.5;
     opacity:0.5;
 }
+.logo-animation.default:after {
+    content:"DEFAULT";
+}
 .logo-animation.fill .blue {
     animation-name: fill;
 }
@@ -59,9 +62,9 @@ body {
     height:100%;
 }
 @keyframes pulse {
-    0% { transform:scale(0.5) }
+    0% { transform:scale(0.4) }
     50% { transform:scale(1) }
-    100% { transform:scale(0.5) }
+    100% { transform:scale(0.4) }
 }
 .logo-animation.pulse:after {
     content:"PULSE";
@@ -99,6 +102,12 @@ body {
 }
 </style>
 
+<div class="logo-animation default">
+    <div class="background">
+        <div class="blue"></div>
+    </div>
+</div>
+
 <div class="logo-animation fill">
     <div class="background">
         <div class="blue"></div>
@@ -124,9 +133,3 @@ body {
     </div>
 </div>
 
-
-
-<script>
-
-
-</script>
