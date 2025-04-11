@@ -1,0 +1,130 @@
+<title>Headroom - Logo Animations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel="icon" type="image/png" href="headroom-favicon.svg"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+}
+.logo-animation {
+    background:rgba(24, 24, 24, 10%);
+    width:32px;
+    height:32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:24px;
+}
+.blue {
+    background:#123bff;
+    position: absolute;
+    width:100%;
+    height:16.6667%;
+    bottom:0;
+    left:0;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+.logo-animation:after {
+    display: block;
+    position: absolute;
+    bottom:-32px;
+    font-size:10px;
+}
+.logo-animation.fill .blue {
+    animation-name: fill;
+}
+@keyframes fill {
+    0% { bottom:0%; height:0% }
+    50% { bottom:0%; height:100%; }
+    100% { bottom:100%; height:0%; }
+}
+.logo-animation.fill:after {
+    content:"FILL";
+}
+.logo-animation.pulse .blue {
+    animation-name: pulse;
+    height:100%;
+}
+@keyframes pulse {
+    0% { transform:scale(0.5) }
+    50% { transform:scale(1) }
+    100% { transform:scale(0.5) }
+}
+.logo-animation.pulse:after {
+    content:"PULSE";
+}
+.logo-animation.scan .blue {
+    animation-name: scan;
+}
+@keyframes scan {
+    0% { bottom:0%; }
+    50% { bottom:83.3334%;  }
+    100% { bottom:0%;  }
+}
+.logo-animation.scan:after {
+    content:"SCAN";
+}
+.logo-animation.glow:before {
+    animation-name: glow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    content:" ";
+    display: block;
+    width:100%;
+    height:100%;
+    background:linear-gradient(0deg, #123bff, transparent);
+}
+@keyframes glow {
+    0% { opacity:0}
+    50% { opacity:1}
+    100% { opacity:0}
+}
+.logo-animation.glow:after {
+    content:"GLOW";
+}
+</style>
+
+<div class="logo-animation fill">
+    <div class="background">
+        <div class="blue"></div>
+    </div>
+</div>
+
+<div class="logo-animation pulse">
+    <div class="background">
+        <div class="blue"></div>
+    </div>
+</div>
+
+<div class="logo-animation scan">
+    <div class="background">
+        <div class="blue"></div>
+    </div>
+</div>
+
+
+<div class="logo-animation glow">
+    <div class="background">
+        <div class="blue"></div>
+    </div>
+</div>
+
+
+
+<script>
+
+
+</script>
