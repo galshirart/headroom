@@ -50,10 +50,10 @@ h1,h2,h3 {
     margin-bottom:32px;
 }
 h1 {
-    font-size:112px;
+    font-size:124px;
     line-height: 84%;
     letter-spacing: -4px;
-    max-width:740px;
+    max-width:800px;
 }
 h2 {
     font-size:60px;
@@ -334,8 +334,12 @@ h1 span:nth-child(28) {animation-delay: 2700ms;}
 h1 span:nth-child(29) {animation-delay: 2800ms;}
 h1 span:nth-child(30) {animation-delay: 2900ms;}
 
-
-line {
+svg.hero {
+    position: absolute; 
+    z-index: 2; 
+    margin-top: -200px;
+}
+svg.hero line {
   animation-name:line;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -969,7 +973,7 @@ tr.new {
 
 <section class="flex center">
 
-    <svg style="position: absolute; z-index: 2; margin-top: -220px;" class="hero" width="560px" height="560px" viewBox="0 0 560 560" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg class="hero" width="560px" height="560px" viewBox="0 0 560 560" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title>hdrm-illustration-power</title>
         <g id="hdrm-illustration-power" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <line x1="359" y1="156" x2="286" y2="156" id="Path-7" stroke="#123BFF" stroke-width="2"></line>
@@ -1174,7 +1178,7 @@ tr.new {
     <p class="subtitle">Custom apps that fit your business. Up and running in minutes.</p>
     <div style="margin-top:32px"></div>
     <div>
-        <a class="button blue big">Request early access</a>
+        <a class="button blue big">Request access</a>
         <!-- <span style="margin:8px"></span>
         <a class="button big">Talk to founders</a> -->
     </div>
