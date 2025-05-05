@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hdrm-icon-graph</title>
+    <g id="hdrm-icon-graph" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#181818" fill-opacity="0.1" fill="#181818" x="4.5" y="4.5" width="15" height="15" rx="2"></rect>
+        <polyline id="Path-4" stroke="#181818" stroke-linecap="round" stroke-linejoin="round" points="4.5 17 9 12 12 14 17 9"></polyline>
+        <polyline id="Path-5" stroke="#181818" stroke-linecap="round" stroke-linejoin="round" points="14 9 17 9 17 12"></polyline>
+    </g>
+</svg>

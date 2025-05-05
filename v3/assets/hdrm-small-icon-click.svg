@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hdrm-small-icon-click</title>
+    <g id="hdrm-small-icon-click" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <polyline id="Path-10" stroke="#181818" points="6 7 9 7 9 10"></polyline>
+        <line x1="9" y1="7" x2="5" y2="11" id="Path-11" stroke="#181818"></line>
+        <path d="M8,13.5 C11.0375661,13.5 13.5,11.0375661 13.5,8 C13.5,4.96243388 11.0375661,2.5 8,2.5 C4.96243388,2.5 2.5,4.96243388 2.5,8" id="Path" stroke="#181818"></path>
+    </g>
+</svg>

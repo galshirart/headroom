@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hdrm-icon-home</title>
+    <g id="hdrm-icon-home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <path d="M4.60452601,8.14467756 L10.857871,3.79452451 C11.5444011,3.31693838 12.4555989,3.31693838 13.142129,3.79452451 L19.395474,8.14467756 C20.1063991,8.63923419 20.2818005,9.61647026 19.7872439,10.3273954 C19.4941131,10.7487708 19.0133058,11 18.5,11 L18.5,11 L18.5,11 L18.5,18 C18.5,19.1045695 17.6045695,20 16.5,20 L7.5,20 C6.3954305,20 5.5,19.1045695 5.5,18 L5.5,11 L5.5,11 C4.63397411,11 3.93192142,10.2979473 3.93192142,9.43192142 C3.93192142,8.91861558 4.18315057,8.4378083 4.60452601,8.14467756 Z" id="Rectangle" stroke="#181818" fill-opacity="0.1" fill="#181818"></path>
+        <polyline id="Path-14" stroke="#181818" stroke-linecap="round" points="5.5 11 12 6.5 18.5 11"></polyline>
+    </g>
+</svg>

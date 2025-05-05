@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hdrm-icon-bell</title>
+    <g id="hdrm-icon-bell" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.1">
+        <rect id="Rectangle" stroke="#181818" fill="#181818" x="4" y="15" width="16" height="3" rx="1.5"></rect>
+        <path d="M5,15 L6.66410059,12.5038491 C6.88312395,12.1753141 7,11.7892987 7,11.3944487 L7,10 L7,10 L7,9 C7,6.23857625 9.23857625,4 12,4 C14.7614237,4 17,6.23857625 17,9 L17,10 L17,10 L17,11.3944487 C17,11.7892987 17.1168761,12.1753141 17.3358994,12.5038491 L19,15 L19,15" id="Path-15" stroke="#181818" fill="#181818"></path>
+        <path d="M10,18 C10,19.1045695 10.8954305,20 12,20 C13.1045695,20 14,19.1045695 14,18" id="Path" stroke="#181818" fill="#181818"></path>
+    </g>
+</svg>

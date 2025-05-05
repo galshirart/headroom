@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hdrm-icon-search</title>
+    <g id="hdrm-icon-search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.1">
+        <circle id="Oval" stroke="#181818" fill="#181818" cx="11" cy="11" r="6.5"></circle>
+        <path d="M15.6242264,15.1440227 L18.6242264,15.1440227 L18.6242264,18.8155955 C18.6242264,19.6440227 17.9526535,20.3155955 17.1242264,20.3155955 C16.2957993,20.3155955 15.6242264,19.6440227 15.6242264,18.8155955 L15.6242264,15.1440227 L15.6242264,15.1440227 Z" id="Rectangle" stroke="#181818" fill="#181818" transform="translate(17.1242, 17.7298) rotate(-45) translate(-17.1242, -17.7298)"></path>
+    </g>
+</svg>
