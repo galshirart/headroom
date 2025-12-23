@@ -1,0 +1,653 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+<style>
+@font-face {
+  font-family: 'TWK Lausanne';
+  src: url("fonts/TWKLausanne-400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TWK Lausanne';
+  src: url("fonts/TWKLausanne-700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TWK Lausanne';
+  src: url("fonts/TWKLausanne-1000.woff") format("woff");
+  font-weight: 1000;
+  font-style: normal;
+}
+* {
+  transition: all .2s cubic-bezier(.8,0,.2,1);
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  scroll-behavior: smooth;
+}
+::selection {
+  color: white;
+  background: #181818;
+}
+body {
+  margin:0;
+  font-size:14px;
+  font-family: 'TWK Lausanne';
+  color:#181818;
+  font-size:26px;
+  font-weight:400;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  padding:0 16px;
+  padding-top:100vh;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.wrap {
+  max-width:1400px;
+  margin:0 auto;
+}
+.hero {
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  margin:auto;
+  width:100%;
+  max-width:1000px;
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 1s cubic-bezier(.8,0,.2,1);
+  z-index: 20;
+}
+.scrolled .hero {
+  width:80px;
+  height:80px;
+  top:24px;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+}
+h1, h2 {
+  font-weight:500;
+  letter-spacing: -2%;
+  margin:0;
+  line-height: 120%;
+}
+h1 {
+  font-size:140px;
+  white-space: nowrap;
+  position: absolute;
+  line-height: 100%;
+  min-width:300px;
+  padding:24px;
+  transition: all 1s cubic-bezier(.8,0,.2,1);
+  opacity:1;
+  animation-name:h1;
+  animation-duration:1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  animation-delay: 0.7s;
+}
+.scrolled h1 {
+  color:transparent;
+}
+@keyframes h1 {
+  0% { opacity:0; margin-bottom:100px; letter-spacing: 0; }
+  100% { opacity:1; margin-bottom:200px; letter-spacing: -0.03em; }
+}
+h2 {
+  font-size:44px;
+  margin:40px auto;
+}
+.base {
+  animation-name:base;
+  animation-duration:1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  background:#123bff;
+  position: absolute;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  bottom:50%;
+  transition: all 1s cubic-bezier(.8,0,.2,1);
+  z-index: 1;
+  margin-bottom:-64px;
+
+}
+@keyframes base {
+  0% { opacity:0; width:0; height:0; }
+  20% { opacity:1; width:40px; height:40px; }
+  24% { opacity:1; width:40px; height:40px; }
+  26% { opacity:0; width:40px; height:40px; }
+  28% { opacity:1; width:40px; height:40px; }
+  40% { opacity:1; width:40px; height:40px; }
+  70% { opacity:1; width:240px; height:40px;}
+  100% { opacity:1; width:240px; height:40px; }
+}
+.scrolled .base {
+  margin-bottom:-64px;
+}
+
+/* .base:before {
+  content: "";
+  position: absolute;
+  left: -276px;
+  z-index: -1;
+  right: 0;
+  opacity: 0;
+  margin: auto;
+  display: block;
+  background: url(img/blur.png);
+  background-size: 100% 100%;
+  width: 792px;
+  height: 600px;
+  animation-name: base-blur;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  filter:saturate(100%);
+  transition: all 1s cubic-bezier(.8,0,.2,1);
+}
+@keyframes base-blur {
+  0% { opacity:0; height:200px; }
+  35% { opacity:0; height:200px; top:-197px  }
+  50% { height:600px; top:-596px }
+  100% { opacity:0.4; height:600px; top:-597px }
+} */
+/* .scrolled .base:before {
+  filter:saturate(0%) brightness(290%);
+} */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #123bff;
+  top:calc(50% + 80px);
+  left:50%;
+  transition: all 8s ease-in;
+}
+.scrolled .particle {
+  width:1px;
+  height:1px;
+  transition: all 2s ease-in;
+  background:transparent;
+}
+.block {
+  padding:120px 24px;
+  border-radius: 32px;
+  max-width:600px;
+  margin:0 auto;
+}
+p {
+  font-size:28px;
+  max-width:700px;
+  margin:100px auto;
+  line-height:150%;
+  position: relative;
+}
+.useless-tools {
+  position: relative;
+  transition: all 0.2s ease-out;
+  cursor: help;
+}
+.useless-tools:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: calc(100% + 10px);
+  height: 100%;
+  display: block;
+  margin-left: 4px;
+  background: #181818;
+  opacity:0.2;
+  transform: rotate(-2deg);
+  transition: all 0.2s ease-out;
+}
+.useless-tools:hover:after {
+  opacity:0.4;
+  background: #181818;
+}
+.useless-tools-tooltip {
+  display: none;
+  transition: none;
+  pointer-events: none;
+  width: 300px;
+  height: 300px;
+  margin-left: -100px;
+  margin-top: -100px;
+  animation: rotate 10s linear infinite;
+  z-index: 10;
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.useless-tools:hover + .useless-tools-tooltip {
+  display: block;
+}
+.useless-tools-tooltip img {
+  width:40px;
+  border-radius: 100%;
+  animation: rotate 10s linear infinite; 
+  animation-direction: reverse;
+}
+.notifications {
+  cursor:pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+.notifications .text {
+  animation-name:fadeInOut;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fadeInOut {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+.notification {
+  position: relative;
+  height:16px;
+  min-width:16px;
+  line-height:10px;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding:2px;
+  text-align: center;
+  background:red;
+  border-radius: 100%;
+  top:-10px;
+  margin-left:-4px;
+  font-size:10px;
+  color:white;
+}
+.you {
+  color:#123bff;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.you:after {
+  content: "";
+  position: absolute;
+  left:-8px;
+  top:-3px;
+  transform: rotate(-10deg);
+  margin:auto;
+  width:130%;
+  height:120%;
+  border:2px solid #123bff;
+  border-radius: 100%;
+}
+.you:hover:after {
+  background: #123bff30;
+}
+.skateboarder {
+  display: none;
+  position: absolute;
+  margin-top:-230px;
+  margin-left:300px;
+  width:100px;
+}
+.you:hover + .skateboarder {
+  display: block;
+  animation: skateboard 2s ease-out;
+  animation-iteration-count: 1;
+}
+@keyframes skateboard {
+  0% { transform: translateX(-300px); }
+  100% { transform: translateX(0px); }
+}
+.slider {
+  opacity:0;
+  position: absolute;
+  transform: translateX(20px);
+  width:fit-content;
+  transition: all 0.1s ease-in-out;
+  background: linear-gradient(90deg, #123bff 0%, #181818 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight:700;
+}
+.slider.show {
+  opacity:1;
+  transform: translateX(0);
+}
+.margin {
+  margin-top:200px;
+}
+.chat {
+  position:relative;
+  min-width:350px;
+  max-width:600px;
+  margin:0 auto;
+  height:300px;
+  background:#f5f5f5;
+  border-radius: 32px;
+  padding:24px;
+}
+.message {
+  width:fit-content;
+  position:relative;
+  padding:10px 14px;
+  border-radius: 16px;
+  margin-bottom:16px;
+  font-size:18px;
+  max-width:350px;
+  text-align: left;
+  line-height:130%;
+  transition: all 0.2s ease-out;
+  animation-name: enter;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+@keyframes enter {
+  0% { opacity:0; transform: translateY(20px); }
+  70% { opacity:1; transform: translateY(-10px); }
+  100% { opacity:1; transform: translateY(0); }
+}
+.message:last-of-type {
+  animation-delay: 2s;
+}
+.message.user {
+  background: #057CFF;
+  color: white;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.message.hdrm {
+  background: rgba(0, 0, 0, 0.05);
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+.message.hide {
+  opacity:0;
+  transform: translateY(-20px);
+}
+.block.blue {
+  background:#123bff;
+  color:white;
+}
+input {
+  display:block;
+  margin:0 auto;
+  width:100%;
+  font-family: 'TWK Lausanne';
+  font-size:14px;
+  font-weight:400;
+  padding:14px 14px;
+  border-radius: 8px;
+  border:1px solid rgba(0, 0, 0, 0.1);
+  outline:none;
+  background:rgba(0, 0, 0, 0.05);
+}
+input::placeholder {
+  color:rgba(0, 0, 0, 0.3);
+}
+input:hover {
+  border-color:rgba(255, 255, 255, 0.2);
+}
+button {
+  display:block;
+  margin:24px auto;
+  width:100%;
+  font-family: 'TWK Lausanne';
+  color:white;
+  font-size:14px;
+  text-align: center;
+  padding:14px 14px;
+  border-radius: 8px;
+  outline:none;
+  border:0;
+  background:black;
+  cursor:pointer;
+}
+button:hover {
+  background:rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 768px) {
+  body { font-size:18px; }
+  h1 { font-size:80px; white-space: normal; }
+  h2 { font-size:24px; }
+  p { font-size:20px; }
+  .block { padding:24px; }
+  p { margin:60px auto; }
+  .margin { margin-top:100px; }
+}
+
+</style>
+<div class="wrap">
+
+<div class="hero">
+  <h1>Time to do less</h1>
+  <div class="base"></div>
+</div>
+
+<div class="block">
+  <p>
+    Tech companies promised efficiency. But you're left with <span class="useless-tools">useless tools</span> that only create more work.
+    <span class="useless-tools-tooltip" style="position: absolute; width: 200px; height: 200px;">
+      <span class="img-container" style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%) rotate(0deg) translateY(-90px) rotate(-0deg);"><img src="img/tool-1.webp" /></span>
+      <span class="img-container" style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%) rotate(45deg) translateY(-90px) rotate(-45deg);"><img src="img/tool-2.webp" /></span>
+      <span class="img-container" style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%) rotate(90deg) translateY(-90px) rotate(-90deg);"><img src="img/tool-3.webp" /></span>
+      <span class="img-container" style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%) rotate(135deg) translateY(-90px) rotate(-135deg);"><img src="img/tool-4.webp" /></span>
+      <span class="img-container" style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%) rotate(180deg) translateY(-90px) rotate(-180deg);"><img src="img/tool-5.webp" /></span>
+      <span class="img-container" style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%) rotate(225deg) translateY(-90px) rotate(-225deg);"><img src="img/tool-6.webp" /></span>
+      <span class="img-container" style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%) rotate(270deg) translateY(-90px) rotate(-270deg);"><img src="img/tool-7.webp" /></span>
+      <span class="img-container" style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%) rotate(315deg) translateY(-90px) rotate(-315deg);"><img src="img/tool-8.webp" /></span>
+    </span>
+  </p>
+  
+  <p>
+    Work isn't about your inbox. It's not about
+    <span class="notifications" onclick="notify()">
+      <span class="text">notifications</span>
+      <span class="notification">1</span>
+    </span>
+    or calendar tetris. Not about following up on the same thread for the fifth time.
+  </p>
+  <p>Work is about <span class="you" onclick="jump()">you</span>.
+  It's about realizing your potential. About building something that matters. The rest is noise.
+    <img src="img/hdrm-skateboard-blue.gif" class="skateboarder" />
+  </p>
+
+
+  <p>We believe that busywork isn't for humans. Headroom runs in the background and<br>
+    <span class="slider">monitors your inbox...</span>
+    <span class="slider">sorts your emails...</span>
+    <span class="slider">finds important messages...</span>
+    <span class="slider">schedules your meetings...</span>
+    <span class="slider">reminds you about tasks...</span>
+    <span class="slider">organizes your notes...</span>
+    <span class="slider">syncs your calendar...</span>
+    <span class="slider">tracks your projects...</span>
+    <span class="slider">analyzes your contacts...</span>
+    <span class="slider">summarizes your documents...</span>
+    <span class="slider">resolves your conflicts...</span>
+    <span class="slider">highlights your deadlines...</span>
+    <span class="slider">prioritizes your workload...</span>
+    <span class="slider">lets you focus...</span>
+    <span class="slider">suggests next steps...</span></span>
+    <span class="slider">remembers your follow-ups...</span></span>
+    <span class="slider">flags important files...</span></span>
+    <span class="slider">automates your workflow...</span></span>
+    <span class="slider">prepares meeting notes...</span></span>
+    <span class="slider">manages your tasks...</span>
+    <div style="margin-top:130px;"></div>
+  </p>
+
+  <p>
+     We connect your email and turn what's happening in your business into action. Work is as easy as shooting off a text. 
+  </p>
+  <div style="margin-top:-60px;"></div>
+  <div class="chat"></div>
+
+  <p>Join the waitlist. We are in private beta and onboard new companies on a rolling basis.</p>
+  <div style="margin-top:-60px;"></div>
+  <input placeholder="Email address" />
+  <button>Join waitlist</button>
+</div>
+
+
+</div>
+
+<script>
+
+setTimeout(function() {
+  setInterval(function() {
+    var particle = document.createElement('div');
+    particle.className = 'particle'; 
+    $('.hero').append(particle);
+
+    var x = Math.random() * 230 - 115;
+    var y = -50;
+    var scale = (Math.random() * 0.9 + 0.1).toFixed(2); // scale between 0.10 and 1.00
+    $(particle).css('transform', 'translate(' + x + 'px, ' + y + 'px) scale(' + scale + ')');
+
+
+    setTimeout(function() {
+      var x = Math.random() * 400 - 200;
+      var y = -400
+      $(particle).css('transform', 'translate(' + x + 'px, ' + y + 'px) scale(0)');
+    }, 100);
+
+    setTimeout(function() {
+      if (particle.parentNode) {
+        particle.parentNode.removeChild(particle);
+      }
+    }, 8000);
+  }, 200);
+}, 700);
+
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > window.innerHeight * 0.5 - 100) {
+    document.body.classList.add('scrolled');
+  } else {
+    document.body.classList.remove('scrolled');
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const el = document.querySelector('.useless-tools');
+  const tooltip = document.querySelector('.useless-tools-tooltip');
+  el.addEventListener('mousemove', e => {
+    tooltip.style.left = (e.clientX) + 'px';
+    tooltip.style.top = (e.clientY) + 'px';
+    tooltip.style.position = 'fixed';
+  });
+});
+
+function notify() {
+  const notification = document.querySelector('.notification');
+  if (!notification) return;
+  let count = parseInt(notification.textContent) + 1;
+  notification.textContent = count;
+}
+
+function jump() {
+  $('.skateboarder').css({
+    'margin-top': '-260px',
+    'transition': 'margin-top 0.2s ease-out'
+  });
+
+  setTimeout(() => { 
+    $('.skateboarder').css({
+      'margin-top': '-230px',
+      'transition': 'margin-top 0.2s ease-in'
+    });
+  }, 200);
+}
+
+var sliderIndex = 0;
+var sliders = document.querySelectorAll('.slider');
+function updateSliderShow() {
+  sliders.forEach(function(slider, idx) {
+    if (idx === sliderIndex) {
+      slider.classList.add('show');
+    } else {
+      slider.classList.remove('show');
+    }
+  });
+}
+
+updateSliderShow();
+setInterval(function() {
+  sliders[sliderIndex].classList.remove('show');
+  sliderIndex = (sliderIndex + 1) % sliders.length;
+  sliders[sliderIndex].classList.add('show');
+}, 1000);
+
+
+chats = [
+  {'user':'I just ran into Allie, let’s track as lead. This is her email: allie@flexxi.com', 'hdrm': 'Got it, added Allie and Flexxi to the system. Looking up more information on them and qualifying the lead!'}, 
+  {'hdrm':'I have an email reply ready for Joseph on the new quote. ', 'user': 'shoot it off!'},
+  {'user':'What’s the latest on GIR?', 'hdrm': 'We sent them the contract yesterday. Ball is in their court rn'},
+  {'hdrm':'Gen wants to meet to discuss the new project. I found 3 slots for next week. OK to send?', 'user': 'yep'},
+]
+
+function playChat(chat) {
+  for (message in chat) {
+    if (message === 'user') {
+      var msgText = chat[message];
+      var $msgDiv = $('<div class="message user"></div>');
+      $('.chat').append($msgDiv);
+      let i = 0;
+      function typeWriter() {
+        if (i < msgText.length) {
+          $msgDiv.text(msgText.substring(0, i+1));
+          i++;
+          setTimeout(typeWriter, 20);
+        }
+      }
+      typeWriter();
+    } else {
+      $('.chat').append('<div class="message hdrm">' + chat[message] + '</div>');
+    }
+  }
+}
+
+chatIndex = 0
+playChat(chats[0]);
+
+setInterval(function() {
+  chatIndex++;
+  if (chatIndex >= chats.length) {
+    chatIndex = 0;
+  }
+  chat = chats[chatIndex];
+
+  $('.chat .message').addClass('hide');
+  setTimeout(function() {
+    $('.chat .message').remove()
+  }, 200);
+
+  setTimeout(function() {
+    playChat(chat);
+  }, 200);
+}, 4000);
+
+
+</script>
