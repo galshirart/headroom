@@ -656,11 +656,14 @@ window.addEventListener('scroll', function() {
   const h2 = document.querySelector('h2');
   if (!h2) return;
   const rect = h2.getBoundingClientRect();
-  if (rect.top <= window.innerHeight-200 && rect.bottom >= 0) {
+  // If we've scrolled past the h2 (its top is above the viewport),
+  // or h2 is in-view, keep the negative.
+  if (rect.top <= window.innerHeight - 200) {
     document.body.classList.add('negative');
-    return;
+  } else {
+    // Only remove negative if we're scrolling back up above h2
+    document.body.classList.remove('negative');
   }
-  document.body.classList.remove('negative');
 });
 
 
